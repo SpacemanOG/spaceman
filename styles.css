@@ -13,8 +13,8 @@ Black bean: #3C0000 */
 
 body {
     margin: 0;
-    /* background-color: #424B54; */
-    background-color: #424651;
+    /* Got this bgcolor from https: //instaprice.app/?ref=onepagelove */
+    background-color: #242625;
 }
 
 p,
@@ -54,10 +54,11 @@ header h1 {
     width: 80%;
     height: 300px;
     margin: auto;
-    border: 2px solid black;
-    background-color: #424651;
+    background-color: #212121;
     border-radius: 16px;
     overflow: hidden;
+    color: #31e1f7;
+    padding-left: 24px;
 }
 
 /* _____Footer_____ */
@@ -90,6 +91,7 @@ header h1 {
     padding-left: 32px;
     padding-top: 8px;
     font-size: large;
+    text-shadow: 1px 1px 1px black;
 }
 
 /* _____MEDIA queries_____ */
