@@ -13,10 +13,12 @@ Black bean: #3C0000 */
 
 body {
     margin: 0;
-    background-color: #424B54;
+    /* background-color: #424B54; */
+    background-color: #424651;
 }
 
-p {
+p,
+.bottomColorBarsText {
     font-family: 'Source Sans Pro', Verdana, sans-serif;
 }
 
@@ -48,31 +50,27 @@ header h1 {
 
 
 /* _____Main body_____ */
-main h2 {
-    font-size: 20vw;
-    /* line-height: 10vw; */
-    color: slategrey;
-}
-
 .main-wrap {
     width: 80%;
-    height: 500px;
+    height: 300px;
     margin: auto;
     border: 2px solid black;
     background-color: #424651;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 /* _____Footer_____ */
 .bottomColorBars1 {
     background-color: #400D51;
     position: fixed;
-    bottom: 48px;
+    bottom: 80px;
 }
 
 .bottomColorBars2 {
     background-color: #D800A6;
     position: fixed;
-    bottom: 24px;
+    bottom: 40px;
 }
 
 .bottomColorBars3 {
@@ -83,12 +81,19 @@ main h2 {
 
 .bottomColorBarsDimensions {
     width: 100%;
-    height: 24px;
+    height: 40px;
     margin: auto;
 }
 
+.bottomColorBarsText {
+    color: white;
+    padding-left: 32px;
+    padding-top: 8px;
+    font-size: large;
+}
+
 /* _____MEDIA queries_____ */
-@media screen and (max-width: 428px) {
+/* @media screen and (max-width: 428px) {
     .main-explore {
         font-size: 20vw;
     }
@@ -100,4 +105,4 @@ main h2 {
     .main-possibilities {
         font-size: 20vw;
     }
-}
+} */
