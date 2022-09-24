@@ -50,7 +50,7 @@ header h1 {
 
 
 /* _____Main body_____ */
-.main-wrap {
+.mainWrap {
     width: 80%;
     height: 300px;
     margin: auto;
@@ -136,6 +136,10 @@ main p:nth-child(3) {
     padding-top: 8px;
     font-size: large;
     text-shadow: 1px 1px 1px black;
+}
+
+footer a:hover {
+    color: yellowgreen;
 }
 
 /* _____MEDIA queries_____ */
