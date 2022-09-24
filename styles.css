@@ -6,9 +6,9 @@ Lavender blush: #FFE9F3
 Black bean: #3C0000 */
 
 
-/* Global */
+/* _____Global_____ */
 * {
-    color: white;
+    box-sizing: border-box;
 }
 
 body {
@@ -23,14 +23,13 @@ p {
 h1,
 h2 {
     margin: 0;
-    padding: 16px 0;
     font-family: 'Spectral', Georgia, serif;
 }
 
-/* Header */
+/* _____Header_____ */
 header {
     width: 80%;
-    height: 80%;
+    /* height: 120px; */
     border: 2px solid #D800A6;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 16px;
@@ -38,18 +37,32 @@ header {
     padding: 10px;
     background-color: black;
     text-align: center;
+    color: white;
 }
 
 header h1 {
     border-radius: 8px;
     background-color: #D800A6;
+    padding: 8px 0;
 }
 
 
-/* Main body */
+/* _____Main body_____ */
+main h2 {
+    font-size: 20vw;
+    /* line-height: 10vw; */
+    color: slategrey;
+}
 
+.main-wrap {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    border: 2px solid black;
+    background-color: #424651;
+}
 
-/* Footer */
+/* _____Footer_____ */
 .bottomColorBars1 {
     background-color: #400D51;
     position: fixed;
@@ -72,4 +85,19 @@ header h1 {
     width: 100%;
     height: 24px;
     margin: auto;
+}
+
+/* _____MEDIA queries_____ */
+@media screen and (max-width: 428px) {
+    .main-explore {
+        font-size: 20vw;
+    }
+
+    .main-the {
+        font-size: 20vw;
+    }
+
+    .main-possibilities {
+        font-size: 20vw;
+    }
 }
