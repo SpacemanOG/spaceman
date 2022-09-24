@@ -59,17 +59,23 @@ header h1 {
     overflow: hidden;
     color: #31e1f7;
     padding-left: 24px;
+    padding-top: 24px;
+}
+
+main p:nth-child(1) {
+    margin-top: 0;
 }
 
 /* THE TYPEWRITER ANIMAITON */
+/* Source: https: //css-tricks.com/snippets/css/typewriter-effect/ */
 main p:nth-child(3) {
-    width: 47ch;
-    overflow: hidden;
+    width: 33ch;
     /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #31e1f7;
+    overflow: hidden;
     /* The typwriter cursor */
-    white-space: nowrap;
+    border-right: .15em solid #31e1f7;
     /* Keeps the content on a single line */
+    white-space: nowrap;
     animation:
         typing 3.5s steps(60, end),
         blink-caret .5s step-end infinite;
@@ -82,7 +88,7 @@ main p:nth-child(3) {
     }
 
     to {
-        width: 47ch
+        width: 33ch
     }
 }
 
@@ -103,7 +109,7 @@ main p:nth-child(3) {
 .bottomColorBars1 {
     background-color: #400D51;
     position: fixed;
-    bottom: 80px;
+    bottom: 79px;
 }
 
 .bottomColorBars2 {
