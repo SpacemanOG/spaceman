@@ -106,40 +106,79 @@ main p:nth-child(3) {
 }
 
 /* _____Footer_____ */
-.bottomColorBars1 {
-    background-color: #400D51;
+
+.overflow-mask {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: yellowgreen; */
+    border: 2px solid white;
     position: fixed;
-    bottom: 79px;
+    top: 0;
+    overflow: hidden;
 }
 
-.bottomColorBars2 {
-    background-color: #D800A6;
-    position: fixed;
-    bottom: 40px;
+.trayDesign {
+    /* background-color: #FF7777; */
+    background-color: rgba(255, 119, 119, 1);
+    backdrop-filter: blur(10px);
 }
 
-.bottomColorBars3 {
-    background-color: #FF7777;
-    position: fixed;
-    bottom: 0;
-}
-
-.bottomColorBarsDimensions {
+.trayContainer {
     width: 100%;
-    height: 40px;
-    margin: auto;
+    height: 625px;
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 75vh;
+    /* This is the transition for mouse-out or not hovering */
+    animation-name: trayAnimationUp;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
 }
 
-.bottomColorBarsText {
+@keyframes trayAnimationUp {
+    from {
+        top: 25vh;
+    }
+
+    to {
+        top: 75vh;
+    }
+}
+
+/* This is the transition for mouse-in or hover */
+.hoverTransition:hover,
+.hoverTransition:focus {
+    animation-name: trayAnimationDown;
+    animation-fill-mode: forwards;
+}
+
+@keyframes trayAnimationDown {
+    from {
+        top: 75vh;
+    }
+
+    to {
+        top: 25vh;
+    }
+}
+
+.trayTitle {
+    height: 50px;
     color: white;
     padding-left: 32px;
     padding-top: 8px;
     font-size: large;
     text-shadow: 1px 1px 1px black;
+    border: 2px solid blue;
+    flex: 0 0 100%;
 }
 
-footer a:hover {
-    color: yellowgreen;
+.trayBody {
+    height: 575px;
+    border: 2px solid lime;
+    flex: 1 1 auto;
 }
 
 /* _____MEDIA queries_____ */
