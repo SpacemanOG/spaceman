@@ -138,8 +138,14 @@ main p:nth-child(5) {
     }
 
     to {
-        top: 28vh;
+        top: 0vh;
     }
+}
+
+.topTrayTitle h2,
+.midTrayTitle h2,
+.botTrayTitle h2 {
+    font-size: xx-large;
 }
 
 /* TRAY SPECIFIC COMPONENTS */
@@ -147,16 +153,17 @@ main p:nth-child(5) {
 /* TOP TRAY */
 
 .trayContainerTop {
-    width: 100%;
-    height: 625px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    top: 75vh;
+    position: absolute;
+    top: 76vh;
     /* Tray slides back in */
     animation-name: traySlideIn;
     animation-duration: .3s;
     animation-timing-function: ease-out;
+    z-index: 1;
 }
 
 @keyframes traySlideIn {
@@ -170,7 +177,7 @@ main p:nth-child(5) {
 }
 
 .topTrayTitle {
-    height: 50px;
+    height: 8vh;
     color: white;
     padding-left: 32px;
     padding-top: 8px;
@@ -180,7 +187,7 @@ main p:nth-child(5) {
 }
 
 .topTrayBody {
-    height: 575px;
+    height: 92vh;
     background-color: rgba(0, 0, 0, .5);
     flex: 1 1 auto;
     color: white;
@@ -198,17 +205,17 @@ main p:nth-child(5) {
 /* MIDDLE TRAY */
 
 .trayContainerMid {
-    width: 100%;
-    height: 625px;
-    border: 2px solid red;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    top: 75vh;
+    position: absolute;
+    top: 84vh;
     /* Tray slides back in */
     animation-name: traySlideIn;
     animation-duration: .3s;
     animation-timing-function: ease-out;
+    z-index: 2;
 }
 
 @keyframes traySlideIn {
@@ -217,32 +224,97 @@ main p:nth-child(5) {
     }
 
     to {
-        top: 75vh;
+        top: 80vh;
     }
 }
 
 .midTrayTitle {
-    height: 50px;
+    height: 8vh;
     color: white;
     padding-left: 32px;
     padding-top: 8px;
-    font-size: large;
     text-shadow: 1px 1px 1px black;
-    border: 2px solid blue;
+    background-color: rgba(216, 0, 166, 1);
     flex: 0 0 100%;
 }
 
 .midTrayBody {
-    height: 575px;
-    border: 2px solid lime;
+    height: 92vh;
+    background-color: rgba(0, 0, 0, .5);
     flex: 1 1 auto;
+    color: white;
+}
+
+.midTrayBody p {
+    width: 80%;
+    height: 60%;
+    margin: 32px auto;
+    border: 2px solid rgba(216, 0, 166, 1);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+/* BOTTOM TRAY */
+
+.trayContainerBottom {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 92vh;
+    /* Tray slides back in */
+    animation-name: traySlideIn;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+    z-index: 3;
+}
+
+@keyframes traySlideIn {
+    from {
+        top: 25vh;
+    }
+
+    to {
+        top: 95vh;
+    }
+}
+
+.botTrayTitle {
+    height: 8vh;
+    color: white;
+    padding-left: 32px;
+    padding-top: 8px;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(64, 13, 81, 1);
+    flex: 0 0 100%;
+}
+
+.botTrayBody {
+    height: 92vh;
+    background-color: rgba(0, 0, 0, .5);
+    flex: 1 1 auto;
+    color: white;
+}
+
+.botTrayBody p {
+    width: 80%;
+    height: 60%;
+    margin: 32px auto;
+    border: 2px solid rgba(64, 13, 81, 1);
+    border-radius: 16px;
+    padding: 16px;
 }
 
 
 /* _____Flexible and Responsive components_____ */
 
 @media screen and (max-width: 450px) {
-    .topTrayBody p {
-        height: 80%;
+
+    .topTrayBody p,
+    .midTrayBody p,
+    .botTrayBody p {
+        height: 76%;
     }
+
 }
