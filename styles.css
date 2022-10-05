@@ -29,6 +29,11 @@ header h2:nth-child(3) {
     border-bottom: 2px solid #FC1577;
 }
 
+header span {
+    background-color: #FFC107;
+    color: #242625;
+}
+
 body {
     background-color: #242625;
     color: white;
@@ -47,4 +52,8 @@ main {
 
 .joke p {
     margin-top: 8px;
+}
+
+footer h3 {
+    color: #FC1577;
 }
