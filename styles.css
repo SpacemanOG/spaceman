@@ -48,9 +48,14 @@ main {
     color: #EFECEC;
     border-radius: 8px;
     padding: 8px 16px;
+    margin-top: 24px;
 }
 
-.joke p {
+main ul {
+    /* padding-left: 24px; */
+}
+
+.joke h3 {
     margin-top: 8px;
 }
 
