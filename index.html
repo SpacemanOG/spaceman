@@ -10,17 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener('DOMContentLoader', nav)
-
-        function nav() {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('.main-nav');
-            burger.addEventListener('click', () => {
-                nav.classList.toggle('show')
-            })
-        }
-    </script>
 </head>
 
 <body>
@@ -72,6 +61,18 @@
         <p>Email: thepeoplewhoinspire@gmail.com</p>
         <h3>Hi family! Sahar, Promy &hearts;</h3>
     </footer>
+    <!-- The JS was supposed to be for the burger menu, but it's not working -->
+    <script>
+        document.addEventListener('DOMContentLoader', nav)
+
+        function nav() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.main-nav');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            })
+        }
+    </script>
 </body>
 
 </html>
