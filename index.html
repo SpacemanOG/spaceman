@@ -10,16 +10,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoader', nav)
+
+        function nav() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.main-nav');
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('show')
+            })
+        }
+    </script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Credentials</li>
-            <li>Tips on UX</li>
+    <nav class="main-nav">
+        <div class="logo">Nav</div>
+        <ul class="nav-links">
+            <li><a href="#">Link-Home</a></li>
+            <li><a href="#">Link2</a></li>
+            <li><a href="#">Link3</a></li>
+            <li><a href="#">Link4</a></li>
         </ul>
+        <div class="burger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
     </nav>
 
     <header>
@@ -38,7 +55,7 @@
                 place! Well, not really. I'm just kidding.</h3>
         </section>
         <section class="listOfServices">
-            <p>I can <em>support</em> and <em>collaborate</em> with you on diversified topics, such as:</p>
+            <p>I <em>can</em> support and collaborate with <em>you</em> on diversified topics, such as:</p>
             <ul>
                 <li>Personal branding and increasing your presence on the web</li>
                 <li>Portfolio development using modern web tools and architectures</li>
@@ -49,6 +66,7 @@
             </ul>
         </section>
     </main>
+
     <footer>
         <p>My name is Alex. And you can communicate with me through email.</p>
         <p>Email: thepeoplewhoinspire@gmail.com</p>

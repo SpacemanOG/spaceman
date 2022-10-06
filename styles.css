@@ -4,12 +4,98 @@ Background - Lighter Black - #212121
 Pink - #D800A6
 Cyan - #31e1f7 */
 
+
+/* GLOBAL PROPERTIES */
+
 * {
-    /* margin: 0;
-    padding: 0; */
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    background-color: #242625;
+    color: white;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+/* THE NAVIGATION PANEL */
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.main-nav {
+    display: flex;
+    height: 8vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding: 0 2rem;
+}
+
+.nav-links {
+    /* I believe the display-fixed is for bigger screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    height: 92vh;
+    /* And the width-40% is for bigger screens */
+    /* width: 40%; */
+    /* And the width-60% is for mobile screens */
+    width: 60%;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.burger {
+    /* I believe the display-none is for bigger screens */
+    /* display: none; */
+    padding: 0.5rem;
+    cursor: pointer;
+    /* And the display-block is for mobile screens */
+    display: block;
+}
+
+.line {
+    height: 2px;
+    width: 35px;
+    margin: 0.5rem 0;
+    background-color: #FFC107;
+    transition: transform 0.75s ease, opacity 0.75s ease;
+}
+
+.main-nav.show .line1 {
+    transform: translate(-10px) rotate(45deg) translate(15px);
+}
+
+.main-nav.show .line2 {
+    opacity: 0;
+}
+
+.main-nav.show .line3 {
+    transform: translate(-10px) rotate(-45deg) translate(15px);
+}
+
+.main-nav.show .nav-links {
+    transform: translateX(0%);
+}
+
+/* HEADER SECTION */
 
 header h1 {
     font-family: 'Caveat', cursive;
@@ -34,12 +120,7 @@ header span {
     color: #242625;
 }
 
-body {
-    background-color: #242625;
-    color: white;
-    width: 90vw;
-    margin: 0 auto;
-}
+/* MAIN BODY */
 
 main {
     /* background-color: #efecec; */
@@ -51,13 +132,12 @@ main {
     margin-top: 24px;
 }
 
-main ul {
-    /* padding-left: 24px; */
-}
-
 .joke h3 {
     margin-top: 8px;
+    color: #F5B0C2;
 }
+
+/* FOOTER SECTION */
 
 footer h3 {
     color: #FC1577;
